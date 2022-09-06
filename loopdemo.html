@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title ="For Each Loop Demo Card">
+
+        <template if:true={Record.data}>
+            <template for:each= {Record.data} for:item="ContactName">
+                <h3 key = {ContactName.Id}>{ContactName.Name}</h3>
+             </template>
+        </template>
+        <template if:true={Record.error}>
+            {Record.error}
+            
+        </template>
+
+    </lightning-card>
+    
+</template>
